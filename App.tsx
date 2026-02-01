@@ -1,15 +1,14 @@
-
 import React, { useState } from 'react';
-import { Screen, Product } from './types';
-import SplashScreen from './screens/SplashScreen';
-import SignInScreen from './screens/SignInScreen';
-import SignUpScreen from './screens/SignUpScreen';
-import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
-import HomeScreen from './screens/HomeScreen';
-import ProductDetailScreen from './screens/ProductDetailScreen';
-import OrdersScreen from './screens/OrdersScreen';
-import ConfirmOrderScreen from './screens/ConfirmOrderScreen';
-import OrderStatusScreen from './screens/OrderStatusScreen';
+import { Screen, Product } from './types.ts';
+import SplashScreen from './screens/SplashScreen.tsx';
+import SignInScreen from './screens/SignInScreen.tsx';
+import SignUpScreen from './screens/SignUpScreen.tsx';
+import ForgotPasswordScreen from './screens/ForgotPasswordScreen.tsx';
+import HomeScreen from './screens/HomeScreen.tsx';
+import ProductDetailScreen from './screens/ProductDetailScreen.tsx';
+import OrdersScreen from './screens/OrdersScreen.tsx';
+import ConfirmOrderScreen from './screens/ConfirmOrderScreen.tsx';
+import OrderStatusScreen from './screens/OrderStatusScreen.tsx';
 
 const App: React.FC = () => {
   const [currentScreen, setCurrentScreen] = useState<Screen>('SPLASH');
