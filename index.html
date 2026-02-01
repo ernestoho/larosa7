@@ -1,16 +1,31 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>LA ROSA Delivery</title>
+    
+    <!-- PWA & Mobile App Meta Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#FFF5E1">
+    <meta name="apple-mobile-web-app-title" content="LA ROSA">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="https://picsum.photos/seed/larosa/180/180">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
       :root {
         --app-bg: #FFF5E1;
         --primary-green: #87BC9E;
+      }
+      * {
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
       }
       body {
         font-family: 'Plus Jakarta Sans', sans-serif;
@@ -20,6 +35,8 @@
         height: 100vh;
         width: 100vw;
         overflow: hidden;
+        /* Disable pull-to-refresh and bounce on mobile */
+        overscroll-behavior: none;
       }
       #root {
         height: 100%;
@@ -39,7 +56,6 @@
         from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
       }
-      /* Ensure text doesn't overflow */
       .truncate-2-lines {
         display: -webkit-box;
         -webkit-line-clamp: 2;
