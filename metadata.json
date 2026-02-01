@@ -1,0 +1,7 @@
+{
+  "name": "LA ROSA - Grocery Delivery",
+  "description": "A premium grocery and meal kit delivery application with a warm, modern aesthetic. Clone of the Foochi design style adapted for LA ROSA.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
